@@ -1,102 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadiq Jewellers | Luxury Gold & Silver</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .gold-text { color: #D4AF37; }
-        .bg-gold { background-color: #D4AF37; }
-        .filterDiv { display: none; }
-        .show { display: block; }
-        /* Smooth loading for images */
-        img { transition: opacity 0.3s; }
-        img:hover { transform: scale(1.05); }
-    </style>
-</head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<link rel="stylesheet" href="assets/css/modal-style.css">
 
-    <header class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-yellow-600">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div>
-                <h1 class="text-2xl md:text-3xl font-bold gold-text tracking-tighter uppercase">Sadiq Jewellers</h1>
-                <p class="text-[10px] text-gray-500 tracking-widest uppercase">Purity is our Tradition</p>
-            </div>
-            <div class="flex space-x-3">
-                <a href="https://wa.me/923142758002" target="_blank" class="bg-green-500 text-white p-2 rounded-full hover:bg-green-600 shadow-lg">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                </a>
-            </div>
-        </div>
-    </header>
+<img class="clickable-img" src="images/gold-ring.jpg" alt="Jewellery" style="width:250px; cursor:pointer;">
 
-    <section class="bg-gray-900 text-white py-16 px-4 text-center">
-        <h2 class="text-4xl font-serif italic mb-4">Aitmad ka Purana Naam</h2>
-        <p class="text-gray-400 max-w-2xl mx-auto">Sadiq Jewellers: 5A5/34 Sarafa Bazar, Paposh Market, Nazimabad No. 5, Karachi.</p>
-    </section>
+<div id="imageModal">
+    <span class="close">&times;</span>
+    <img id="modalImg">
+</div>
 
-    <section class="container mx-auto px-4 -mt-10">
-        <div class="max-w-3xl mx-auto bg-black rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-            <video controls preload="metadata" class="w-full">
-                <source src="shop_video.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
+<script>
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImg");
+    var closeBtn = document.querySelector(".close");
 
-    <section class="container mx-auto px-4 py-12">
-        <div class="flex flex-wrap justify-center gap-3 mb-10">
-            <button onclick="filterSelection('all')" class="bg-yellow-700 text-white px-6 py-2 rounded-full font-bold shadow-md hover:bg-yellow-800 transition">All</button>
-            <button onclick="filterSelection('rings')" class="border-2 border-yellow-700 text-yellow-800 px-6 py-2 rounded-full font-bold hover:bg-yellow-700 hover:text-white transition">Rings</button>
-            <button onclick="filterSelection('necklace')" class="border-2 border-yellow-700 text-yellow-800 px-6 py-2 rounded-full font-bold hover:bg-yellow-700 hover:text-white transition">Necklace</button>
-            <button onclick="filterSelection('bracelets')" class="border-2 border-yellow-700 text-yellow-800 px-6 py-2 rounded-full font-bold hover:bg-yellow-700 hover:text-white transition">Bracelets</button>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            
-            <div class="filterDiv rings bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition">
-                <img src="rings/r1.png" class="w-full h-48 object-cover" onerror="this.src='https://via.placeholder.com/300?text=Ring+r1.png+Not+Found'">
-                <div class="p-4 text-center">
-                    <h4 class="font-bold">Gold Ring R1</h4>
-                    <p class="text-xs text-gray-500 mb-2">22K Pure Gold Design</p>
-                    <p class="text-yellow-700 font-bold mb-3">Rate: Ask on WhatsApp</p>
-                    <a href="https://wa.me/923142758002?text=Price for Ring R1" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold block hover:bg-green-700">Order Now</a>
-                </div>
-            </div>
-
-            <div class="filterDiv necklace bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition">
-                <img src="necklace/n1.png" class="w-full h-48 object-cover" onerror="this.src='https://via.placeholder.com/300?text=Necklace+n1.png+Not+Found'">
-                <div class="p-4 text-center">
-                    <h4 class="font-bold">Necklace N1</h4>
-                    <p class="text-xs text-gray-500 mb-2">Bridal Collection</p>
-                    <p class="text-yellow-700 font-bold mb-3">Rate: Ask on WhatsApp</p>
-                    <a href="https://wa.me/923142758002?text=Price for Necklace N1" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold block hover:bg-green-700">Order Now</a>
-                </div>
-            </div>
-
-            </div>
-    </section>
-
-    <footer class="bg-white border-t-8 border-yellow-700 py-12 text-center mt-10">
-        <div class="mb-4">
-            <i class="fas fa-map-marker-alt text-red-600"></i>
-            <span class="font-bold text-gray-700"> 5A5/34 Sarafa Bazar, Paposh Market, Nazimabad 5, Karachi</span>
-        </div>
-        <p class="text-gray-400 text-sm italic">&copy; 2026 Sadiq Jewellers. Developed with ❤️ for Purity.</p>
-    </footer>
-
-    <script>
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("filterDiv");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                x[i].classList.remove("show");
-                if (x[i].className.indexOf(c) > -1) x[i].classList.add("show");
-            }
+    // Sab images ko clickable banane ka logic
+    document.querySelectorAll('.clickable-img').forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
         }
-        filterSelection("all"); // Start with all items showing
-    </script>
-</body>
-</html>
+    });
+
+    // Band karne ka logic
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Bahar click karne par band hona
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>

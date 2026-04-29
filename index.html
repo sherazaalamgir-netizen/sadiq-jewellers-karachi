@@ -19,14 +19,14 @@
         img.clickable-img { transition: transform 0.3s ease; cursor: pointer; }
         img.clickable-img:hover { transform: scale(1.05); }
 
-        /* Floating WhatsApp Buttons Styling */
+        /* Floating WhatsApp Buttons */
         .wa-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
         .wa-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: 0.3s; }
         .wa-p1 { background-color: #25D366; animation: pulse 2s infinite; }
         .wa-p2 { background-color: #128C7E; }
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
         
-        /* Modal Style (Backup if CSS file is missing) */
+        /* Modal Style Backup */
         #imageModal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); padding-top: 50px; }
         #modalImg { margin: auto; display: block; max-width: 90%; max-height: 80%; border: 4px solid white; border-radius: 10px; }
         .close { position: absolute; top: 20px; right: 35px; color: white; font-size: 50px; font-weight: bold; cursor: pointer; }
@@ -34,7 +34,7 @@
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
 
-    <a href="https://maps.app.goo.gl/18jH6GZ6oGz7Z7" target="_blank" class="bg-yellow-700 text-white py-2 text-center text-[10px] md:text-sm tracking-wide block hover:bg-yellow-800 transition duration-300">
+    <a href="https://www.google.com/maps/search/?api=1&query=Sadiq+Jewellers+Sarafa+Bazar+Paposh+Market+Karachi" target="_blank" class="bg-yellow-700 text-white py-2 text-center text-[10px] md:text-sm tracking-wide block hover:bg-yellow-800 transition duration-300">
         <i class="fas fa-map-marker-alt mr-2 text-yellow-200"></i> 
         5A5/34 Sarafa Bazar, Paposh Market, Nazimabad No. 5, Karachi
     </a>
@@ -44,9 +44,6 @@
             <div>
                 <h1 class="text-2xl md:text-3xl font-bold gold-text tracking-tighter uppercase">Sadiq Jewellers</h1>
                 <p class="text-[10px] text-gray-500 tracking-widest uppercase">Purity is our Tradition</p>
-            </div>
-            <div class="hidden md:block text-right">
-                <p class="text-xs font-bold text-gray-600 italic">Established Since 19XX</p>
             </div>
         </div>
     </header>
@@ -78,57 +75,51 @@
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <div class="filterDiv rings bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition">
-                <img src="rings/r1.png" class="clickable-img w-full h-48 object-cover" onerror="this.src='https://via.placeholder.com/300?text=Jewellery+Image'">
+                <img src="rings/r1.png" class="clickable-img w-full h-48 object-cover" onerror="this.src='https://via.placeholder.com/300?text=Ring+Image'">
                 <div class="p-4 text-center">
                     <h4 class="font-bold">Gold Ring R1</h4>
                     <p class="text-xs text-gray-500 mb-2">22K Pure Gold Design</p>
-                    <a href="https://wa.me/923142758002?text=I am interested in Ring R1" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold block hover:bg-green-700 transition">Order Now</a>
+                    <a href="https://wa.me/923142758002?text=I+am+interested+in+Ring+R1" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold block hover:bg-green-700 transition">Order Now</a>
                 </div>
             </div>
 
             <div class="filterDiv necklace bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl transition">
-                <img src="necklace/n1.png" class="clickable-img w-full h-48 object-cover" onerror="this.src='https://via.placeholder.com/300?text=Jewellery+Image'">
+                <img src="necklace/n1.png" class="clickable-img w-full h-48 object-cover" onerror="this.src='https://via.placeholder.com/300?text=Necklace+Image'">
                 <div class="p-4 text-center">
                     <h4 class="font-bold">Necklace N1</h4>
                     <p class="text-xs text-gray-500 mb-2">Bridal Collection</p>
-                    <a href="https://wa.me/923102580930?text=I am interested in Necklace N1" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold block hover:bg-green-700 transition">Order Now</a>
+                    <a href="https://wa.me/923102580930?text=I+am+interested+in+Necklace+N1" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold block hover:bg-green-700 transition">Order Now</a>
                 </div>
             </div>
         </div>
     </section>
 
     <div id="imageModal">
-        <span class="close">&times;</span>
+        <span class="close">×</span>
         <img id="modalImg">
     </div>
 
     <div class="wa-container">
-        <a href="https://wa.me/923102580930" class="wa-btn wa-p1" target="_blank" title="Contact on 03102580930">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://wa.me/923142758002" class="wa-btn wa-p2" target="_blank" title="Contact on 03142758002">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+        <a href="https://wa.me/923102580930" class="wa-btn wa-p1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/923142758002" class="wa-btn wa-p2" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <footer class="bg-white border-t-8 border-yellow-700 py-12 text-center mt-10">
         <div class="container mx-auto px-4">
             <div class="mb-8">
                 <h3 class="gold-text font-bold text-2xl mb-2 uppercase tracking-widest">Sadiq Jewellers</h3>
-                
-                <a href="https://maps.app.goo.gl/18jH6GZ6oGz7Z7" target="_blank" class="inline-block group">
+                <a href="https://www.google.com/maps/search/?api=1&query=Sadiq+Jewellers+Sarafa+Bazar+Paposh+Market+Karachi" target="_blank" class="inline-block group">
                     <p class="text-gray-700 font-bold group-hover:text-yellow-700 transition">5A5/34 Sarafa Bazar, Paposh Market</p>
                     <p class="text-gray-500 mb-2 group-hover:text-yellow-700 transition">Nazimabad No. 5, Karachi</p>
-                    <span class="text-blue-600 text-xs font-bold underline">📍 Click to View on Google Maps</span>
+                    <span class="text-blue-600 text-xs font-bold underline">📍 Open Google Maps</span>
                 </a>
             </div>
-            
-            <p class="text-gray-400 text-xs italic border-t pt-8">&copy; 2026 Sadiq Jewellers. Developed with ❤️ for Purity.</p>
+            <p class="text-gray-400 text-xs italic border-t pt-8">© 2026 Sadiq Jewellers.</p>
         </div>
     </footer>
 
     <script>
-        // Gallery Filter Logic
+        // Gallery Filter
         function filterSelection(c) {
             var x, i;
             x = document.getElementsByClassName("filterDiv");
@@ -140,12 +131,11 @@
         }
         filterSelection("all");
 
-        // Modal Pop-up Logic
+        // Modal Logic
         var modal = document.getElementById("imageModal");
         var modalImg = document.getElementById("modalImg");
         var closeBtn = document.querySelector(".close");
 
-        // Select all images with clickable-img class
         document.querySelectorAll('.clickable-img').forEach(img => {
             img.onclick = function() {
                 modal.style.display = "block";
@@ -153,18 +143,8 @@
             }
         });
 
-        // Close the modal when clicking (X)
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // Close the modal when clicking outside the image
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+        closeBtn.onclick = function() { modal.style.display = "none"; }
+        window.onclick = function(e) { if (e.target == modal) modal.style.display = "none"; }
     </script>
-
 </body>
 </html>
